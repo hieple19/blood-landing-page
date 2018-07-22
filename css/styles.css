@@ -1,0 +1,109 @@
+/*****************************
+  BASE SETUP
+*****************************/
+
+html {
+  box-sizing: border-box; /* use IE box model */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; /* inherit allows for easy creation of a new box model context further down the tree */
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; /* smoother rendering of fonts */
+  font-family: "Poppins", sans-serif;
+  color: rgb(86, 98, 112);
+  background: linear-gradient(
+      165deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(194, 201, 229, 0.25)
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(238, 184, 189, 0.25),
+      rgba(255, 255, 255, 0.25)
+    );
+  /* background: radial-gradient(circle at 75% 75%, rgba(238,184,189,0.25), rgba(255,255,255,0.25)); */
+  /* background: linear-gradient(165deg,rgba(255,255,255,0.03),rgba(194,201,229,0.25)); */
+}
+
+:root {
+  --nav-height: 90px;
+  --content-height: calc(100vh - var(--nav-height));
+}
+
+.navbar {
+  height: var(--nav-height);
+}
+
+.navbar-items {
+  padding-right: 8%;
+  line-height: var(--nav-height);
+  text-align: right;
+}
+
+.navbar-item {
+  padding-right: 2%;
+  display: inline-block;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content-container {
+  display: flex;
+  height: var(--content-height);
+}
+
+.left {
+  flex: 1 1 50%;
+  overflow: hidden;
+  padding-left: 10vw;
+  padding-top: 10vh;
+}
+
+.left .header {
+  padding-bottom: 5vh;
+  font-size: 2.2rem;
+  line-height: 3rem;
+}
+
+.left .text-details {
+  padding-right: 8vw;
+  padding-bottom: 5vh;
+  line-height: 2rem;
+}
+
+.left .cta-button {
+  width: 170px;
+  height: 48px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 24px;
+  overflow: hidden;
+  /* background: rgb(232,133,173); */
+  background: -moz-linear-gradient(rgb(249, 149, 194), rgb(232, 133, 173));
+  background: linear-gradient(rgb(249, 149, 194), rgb(232, 133, 173));
+}
+
+.cta-button a {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  text-decoration: none;
+  color: white;
+}
+
+.right {
+  flex: 1 1 50%;
+  background-image: url(../images/blood-donor-illustration.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
